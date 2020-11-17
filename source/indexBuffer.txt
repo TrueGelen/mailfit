@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<div lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Askona</title>
+</head>
+
+<body class="page">
+  <aside class="asideColumn">
+    <p>Ента типа та кАлонка да?</p>
+  </aside>
+  <div class="pageWrap">
+    
+  </div>
+  <script src="js/build.js"></script>
+</body>
+
+</div>
+
+<picture>
+	<source srcset="img/header/tablet/cards.png" media="(max-width: 1024px)">
+	<img src="img/header/cards.png" alt="cards">
+</picture>
+
+<svg class="decision__svg">
+	<use xlink:href="svgSprite/sprite.svg#pyramid"></use>
+</svg>
+
+<div class="team__members">
+  <div class="member">
+    <div class="member__photoBlock">
+      <picture>
+        <source srcset="img/team/sm/kirunina.png" media="(max-width: 768px)">
+        <img src="img/team/kirunina.png" alt="kirunina" class="member__photo">
+      </picture>
+      <picture>
+        <source srcset="img/team/sm/shadow.png" media="(max-width: 768px)">
+        <img src="img/team/shadow.png" alt="shadow" class="member__shadow">
+      </picture>
+    </div>
+    <p class="member__name">Надежда Кирюнина</p>
+    <p class="member__position">Warner Bros Home Entertainment, менеджер, видео и цифровая
+      дистрибуция,
+      Россия/СНГ</p>
+  </div>
+  <div class="member">
+    <div class="member__photoBlock">
+      <picture>
+        <source srcset="img/team/sm/orlovskaya.png" media="(max-width: 768px)">
+        <img src="img/team/orlovskaya.png" alt="orlovskaya" class="member__photo">
+      </picture>
+      <picture>
+        <source srcset="img/team/sm/shadow.png" media="(max-width: 768px)">
+        <img src="img/team/shadow.png" alt="shadow" class="member__shadow">
+      </picture>
+    </div>
+    <p class="member__name">Вероника Орловская</p>
+    <p class="member__position">Аккаунт директор</p>
+  </div>
+  <div class="member">
+    <div class="member__photoBlock">
+      <picture>
+        <source srcset="img/team/sm/artemeva.png" media="(max-width: 768px)">
+        <img src="img/team/artemeva.png" alt="artemeva" class="member__photo">
+      </picture>
+      <picture>
+        <source srcset="img/team/sm/shadow.png" media="(max-width: 768px)">
+        <img src="img/team/shadow.png" alt="shadow" class="member__shadow">
+      </picture>
+    </div>
+    <p class="member__name">Анастасия Артемьева</p>
+    <p class="member__position">Аккаунт менеджер</p>
+  </div>
+  <div class="member">
+    <div class="member__photoBlock">
+      <picture>
+        <source srcset="img/team/sm/titova.png" media="(max-width: 768px)">
+        <img src="img/team/titova.png" alt="titova" class="member__photo">
+      </picture>
+      <picture>
+        <source srcset="img/team/sm/shadow.png" media="(max-width: 768px)">
+        <img src="img/team/shadow.png" alt="shadow" class="member__shadow">
+      </picture>
+    </div>
+    <p class="member__name">Валерия Титова</p>
+    <p class="member__position">Медиапланнер</p>
+  </div>
+  <div class="member">
+    <div class="member__photoBlock">
+      <picture>
+        <source srcset="img/team/sm/shukshina.png" media="(max-width: 768px)">
+        <img src="img/team/shukshina.png" alt="shukshina" class="member__photo">
+      </picture>
+      <picture>
+        <source srcset="img/team/sm/shadow.png" media="(max-width: 768px)">
+        <img src="img/team/shadow.png" alt="shadow" class="member__shadow">
+      </picture>
+    </div>
+    <p class="member__name">Валерия Шукшина</p>
+    <p class="member__position">Заместитель руководителя отдела контекстной рекламы</p>
+  </div>
+  <div class="member">
+    <div class="member__photoBlock">
+      <picture>
+        <source srcset="img/team/sm/prokin.png" media="(max-width: 768px)">
+        <img src="img/team/prokin.png" alt="prokin" class="member__photo">
+      </picture>
+      <picture>
+        <source srcset="img/team/sm/shadow.png" media="(max-width: 768px)">
+        <img src="img/team/shadow.png" alt="shadow" class="member__shadow">
+      </picture>
+    </div>
+    <p class="member__name">Андрей Прокин</p>
+    <p class="member__position">SMM менеджер</p>
+  </div>
+</div>

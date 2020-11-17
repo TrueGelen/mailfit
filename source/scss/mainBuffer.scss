@@ -1,0 +1,25 @@
+
+.asideColumn{
+	position: fixed;
+	z-index: 10;
+	width: 185px;
+	height: 100vh;
+	padding: 20px 0 10px 25px;
+	background-color: #fff;
+	border-right: 1px solid #e5e5e5;
+
+	@include to(1023px){
+		display: none;
+	}
+
+	& > p{
+	}
+}
+
+.pageWrap{
+	padding-left: 187px;
+
+	@include to(1023px){
+		padding-left: 0;
+	}
+}

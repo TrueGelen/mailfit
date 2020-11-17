@@ -1,0 +1,68 @@
+@import 'smart-grid';
+@import '_normalize';
+@import '_fonts';
+@import 'swiper.min.css';
+
+//---vars
+$color_text: white;
+$color_bg: #4F73CD;
+$color_cardBg: #254595;
+$color_btnBg: #0047FE;
+
+///---------common styles ----------------------
+
+html {
+	// font-size: 20px;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+img{
+	margin: 0;
+	padding: 0;
+	width: 100%;	
+}
+
+picture{
+	display: block;
+
+	& > *{
+		vertical-align: top;
+	}
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style: none;
+	color: #fff;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+body, div, h1, h2, h3, h4, p, input {
+	margin: 0;
+	padding: 0;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.container {	
+	
+}
