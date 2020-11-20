@@ -26,7 +26,7 @@ var settings = {
   offset: '30px', /* gutter width px || % || rem */
   mobileFirst: false, /* mobileFirst ? 'min-width' : 'max-width' */
   container: {
-    maxWidth: 'calc(91.1%)', /* max-width оn very large screen */
+    maxWidth: '93%', /* max-width оn very large screen */
     fields: '30px' /* side fields */
   },
   breakPoints: {
@@ -37,24 +37,23 @@ var settings = {
     // 	width: '1440px',
     // },
     md: {
-      width: '1439px'
+      width: '1024px'
     },
     sm: {
-      width: '767px',
+      width: '768px',
       fields: '30px',/* set fields only if you want to change container.fields */
       offset: '0px'
     },
-    // xs: {
-    // 	width: '560px',
-    // 	fields: '15px',
-    // 	offset: '0px'
-
-    // },
-    // xxs: {
-    // 	width: '420px',
-    // 	fields: '15px',
-    // 	offset: '0px'
-    // }
+    xs: {
+      width: '560px',
+      fields: '15px',
+      offset: '0px'
+    },
+    xxs: {
+      width: '420px',
+      fields: '15px',
+      offset: '0px'
+    }
   }
 };
 

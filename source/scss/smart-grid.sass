@@ -1,24 +1,18 @@
 $columns: 12
 $atom: (100% / $columns)
 
-$break_elg: 1300px
-$break_lg: 1200px
 $break_md: 1024px
 $break_sm: 768px
 $break_xs: 560px
 $break_xxs: 420px
 
 $offset: 30px
-$offset_elg: $offset
-$offset_lg: $offset
 $offset_md: $offset
 $offset_sm: 0px
 $offset_xs: 0px
 $offset_xxs: 0px
 
 $offset_one_side: ($offset / 2)
-$offset_elg_one_side: ($offset_elg / 2)
-$offset_lg_one_side: ($offset_lg / 2)
 $offset_md_one_side: ($offset_md / 2)
 $offset_sm_one_side: ($offset_sm / 2)
 $offset_xs_one_side: ($offset_xs / 2)
@@ -78,7 +72,7 @@ $fields_xxs: 15px
         #{$type}-right: $offset_xxs_one_side
 
 =wrapper()
-    max-width: calc(96.82% + 60px)
+    max-width: 93%
     margin: 0 auto
     +wrapper-full()
 
@@ -113,14 +107,6 @@ $fields_xxs: 15px
 =size($n)
     $val: 100% / $columns * $n
     width: #{calc(#{$val} - #{$offset})}
-
-=size-elg($n)
-    $val: 100% / $columns * $n
-    +elg(width, #{calc(#{$val} - #{$offset_elg})})
-
-=size-lg($n)
-    $val: 100% / $columns * $n
-    +lg(width, #{calc(#{$val} - #{$offset_lg})})
 
 =size-md($n)
     $val: 100% / $columns * $n
@@ -163,58 +149,6 @@ $fields_xxs: 15px
 =shift-padding-right($n)
     $val: 100% / $columns * $n
     padding-right: #{calc(#{$val} + #{$offset_one_side})}
-
-=shift-elg($n)
-    $val: 100% / $columns * $n
-    +elg(margin-left, #{calc(#{$val} + #{$offset_elg_one_side})})
-    +elg(margin-right, #{calc(#{$val} + #{$offset_elg_one_side})})
-
-=shift-elg-left($n)
-    $val: 100% / $columns * $n
-    +elg(margin-left, #{calc(#{$val} + #{$offset_elg_one_side})})
-
-=shift-elg-right($n)
-    $val: 100% / $columns * $n
-    +elg(margin-right, #{calc(#{$val} + #{$offset_elg_one_side})})
-
-=shift-elg-padding($n)
-    $val: 100% / $columns * $n
-    +elg(padding-left, #{calc(#{$val} + #{$offset_elg_one_side})})
-    +elg(padding-right, #{calc(#{$val} + #{$offset_elg_one_side})})
-
-=shift-elg-padding-left($n)
-    $val: 100% / $columns * $n
-    +elg(padding-left, #{calc(#{$val} + #{$offset_elg_one_side})})
-
-=shift-elg-padding-right($n)
-    $val: 100% / $columns * $n
-    +elg(padding-right, #{calc(#{$val} + #{$offset_elg_one_side})})
-
-=shift-lg($n)
-    $val: 100% / $columns * $n
-    +lg(margin-left, #{calc(#{$val} + #{$offset_lg_one_side})})
-    +lg(margin-right, #{calc(#{$val} + #{$offset_lg_one_side})})
-
-=shift-lg-left($n)
-    $val: 100% / $columns * $n
-    +lg(margin-left, #{calc(#{$val} + #{$offset_lg_one_side})})
-
-=shift-lg-right($n)
-    $val: 100% / $columns * $n
-    +lg(margin-right, #{calc(#{$val} + #{$offset_lg_one_side})})
-
-=shift-lg-padding($n)
-    $val: 100% / $columns * $n
-    +lg(padding-left, #{calc(#{$val} + #{$offset_lg_one_side})})
-    +lg(padding-right, #{calc(#{$val} + #{$offset_lg_one_side})})
-
-=shift-lg-padding-left($n)
-    $val: 100% / $columns * $n
-    +lg(padding-left, #{calc(#{$val} + #{$offset_lg_one_side})})
-
-=shift-lg-padding-right($n)
-    $val: 100% / $columns * $n
-    +lg(padding-right, #{calc(#{$val} + #{$offset_lg_one_side})})
 
 =shift-md($n)
     $val: 100% / $columns * $n
@@ -319,22 +253,6 @@ $fields_xxs: 15px
 =shift-xxs-padding-right($n)
     $val: 100% / $columns * $n
     +xxs(padding-right, #{calc(#{$val} + #{$offset_xxs_one_side})})
-
-=elg($name, $value)
-    @media screen and (max-width: $break_elg)
-        #{$name}: $value
-
-=elg-block()
-    @media screen and (max-width: $break_elg)
-        @content
-
-=lg($name, $value)
-    @media screen and (max-width: $break_lg)
-        #{$name}: $value
-
-=lg-block()
-    @media screen and (max-width: $break_lg)
-        @content
 
 =md($name, $value)
     @media screen and (max-width: $break_md)
