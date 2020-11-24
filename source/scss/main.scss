@@ -5,7 +5,8 @@
 
 //---vars
 $color_text: white;
-$color_bg: #4F73CD;
+// $color_bg: #4F73CD;
+$color_bg: rgb(209, 209, 148);
 $color_cardBg: #254595;
 $color_btnBg: #0047FE;
 $color_menuBg: #80A0F2;
@@ -13,10 +14,14 @@ $color_menuBg: #80A0F2;
 ///---------common styles ----------------------
 
 html {
-  font-size: 1.1vw;
+  font-size: 1.3vw;
+
+  @include from(1681){
+    font-size: 1vw;
+  }
 
   @include md-block{
-    font-size: 20px;
+    font-size: 2.3vw;
   }	
 }
 
@@ -75,14 +80,20 @@ body, div, h1, h2, h3, h4, p, input {
 .container {
   border: 1px solid red;
   @include wrapper();
-  
-  @include from (1024px){
+
+  @include from(1681px){
     padding: 0 8vw;
   }
+  
+  @include from (1024px){
+    padding: 0 5vw;
+  }
+
+  @include md(max-width, none);
 }
 
 .header{
-  padding-top: 3vw;
+  padding-top: 3.5vw;
   // font-family: Golos-Bold;
   color: white;
 
@@ -92,15 +103,20 @@ body, div, h1, h2, h3, h4, p, input {
 
   &__title{
     font-family: Golos-Bold, sans-serif;
-    font-size: 1.8rem;
+    font-size: 2.3rem;
+
+    @include md-block{      
+      font-size: 2rem;
+      line-height: 1;
+    }
   }
 }
 
 .menu{
-  // border: 1px solid white;
+  border: 1px solid white;
   width: 100%;
   margin: 0;
-  margin: 1rem 0 0 0;
+  margin: 1.15rem 0 0 0;
   padding: 0;
 
   &__list{
@@ -108,17 +124,23 @@ body, div, h1, h2, h3, h4, p, input {
     width: 100%;
     display: flex;
     margin: 0 -.3rem;
+    flex-wrap: wrap;
   }
 
   &__item{
     font-family: Golos-Regular, sans-serif;    
-    border-radius: .4rem;    
-    font-size: .8rem;
+    border-radius: .4rem;
+    font-size: 1.05rem;
 
     margin: 0 .3rem;
     padding: .5rem 1rem;
     cursor: pointer;
     transition: .3s;
+
+    @include md-block{
+      margin: .3rem;
+      font-size: 1rem;
+    }
 
     &:hover{
       background-color: rgba(168, 187, 236, 0.3);
@@ -141,6 +163,7 @@ body, div, h1, h2, h3, h4, p, input {
   &__container{
     position: relative;
     width: 100%;
+
     @include from(1024px){
       padding: 0;
     }
@@ -150,11 +173,24 @@ body, div, h1, h2, h3, h4, p, input {
 .swiper-container {
   border: 1px solid black;
   position: relative;  
-  width: calc(83% + 60px);
-  height: calc(34.7vw + 3rem);
+  width: calc(89.5% + 60px);
+  height: calc(37.6vw + 3rem);
   margin-left: auto;
   margin-right: auto;
   padding: 30px;
+
+  @include from(1681px){
+    // width: calc(80% + 60px);
+    width: calc(100% + 60px);
+    height: calc(34vw + 3rem);
+    margin-left: -30px;
+  }
+
+  @include md-block{
+    width: calc(100% + 60px);
+    margin-left: -30px;
+    height: calc(80vw + 3rem);
+  }
 }
 
 .swiper-wrapper{
@@ -163,6 +199,24 @@ body, div, h1, h2, h3, h4, p, input {
 
 .swiper-slide {
   height: calc((100% - 30px) / 2);
+}
+
+.swiper-pagination{
+  display: none;
+
+  @include md-block{
+    display: block;
+    bottom: 0 !important;
+  }
+
+  & > .swiper-pagination-bullet{
+    background: white;
+    opacity: 1;
+
+    &-active{
+      background-color: $color_btnBg;
+    }
+  }
 }
 
 .swiper-buttons{
@@ -174,17 +228,29 @@ body, div, h1, h2, h3, h4, p, input {
   transform: translate(-50%, -50%);
   display: flex;
   justify-content: space-between;
+
+  @include md(display, none);
 }
 
 .swiper-button{
+  position: relative;
   background-color: rgba(0, 0, 0, 0);
   border-radius: 50%;
-  width: 2rem;
-  height: 2rem;
-  line-height: 1;
+  width: 2.3rem;
+  height: 2.3rem;
 
   transition: .3s;
   cursor: pointer;
+
+  & > svg{
+    // border: 1px solid red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1.3rem;
+    height: 1.3rem;
+  }
 
   //todo ховер и курсор поитер для дивайсов
 
@@ -238,11 +304,11 @@ body, div, h1, h2, h3, h4, p, input {
         border-radius: .4rem 0rem 0rem .4rem;
       }
     
-      &:hover > .direction__more{
-        left: 0;
-        padding: 1.5rem 1.5rem 1.5rem calc((11.8vw - 10px) + 1.5rem);
-        width: calc((11.8vw - 10px) * 3 + 60px);
-      }
+      // &:hover > .direction__more{
+      //   left: 0;
+      //   padding: 1.5rem 1.5rem 1.5rem calc(11.55vw + 1.5rem);
+      //   width: calc(11.55vw * 3 + 60px);
+      // }
     
       &:hover > .direction__more > * {
         opacity: 1;
@@ -261,11 +327,11 @@ body, div, h1, h2, h3, h4, p, input {
   
     &:hover > .direction__more{
       // right: 0;
-      left: 0;
-      padding: 1.5rem 1.5rem 1.5rem 1.5rem;
-      border-radius: .4rem 0rem 0rem .4rem;
-      width: calc((11.8vw - 10px) * 2 + 60px);
-      transform: translateX(calc(-100%));
+      // left: 0;
+      // padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+      // // border-radius: .4rem 0rem 0rem .4rem;
+      // width: calc(11.55vw * 2 + 60px);
+      // transform: translateX(calc(-100%));
     }
   
     &:hover > .direction__more > * {
@@ -302,12 +368,12 @@ body, div, h1, h2, h3, h4, p, input {
     width: 0;
     height: 100%;
     background-color: $color_cardBg;
-    border-radius: .4rem;
     overflow: hidden;
-
+    border-radius: .4rem;
     transition: .3s;
 
-    &_right{
+    &_right{      
+    
       & > * {
         opacity: 0;
         transition: .5s;
@@ -329,9 +395,32 @@ body, div, h1, h2, h3, h4, p, input {
       line-height: 1.4;
       color: white;
     }
+  }
 
-    & > div{
-      margin-top: .5rem;
+  &__button {
+    margin-top: .5rem;
+  }
+
+  &__closeMore{
+    display: none;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    line-height: 1;
+
+    @media (hover){
+      cursor: pointer;
+    }
+
+    @include md-block{
+      display: block;
+    }
+
+    & > svg {
+      display: block;
+      fill: white;
+      width: 15px;
+      height: 15px;
     }
   }
 }

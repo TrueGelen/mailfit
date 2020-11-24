@@ -15,7 +15,7 @@
       <h1 class="header__title">Наши направления</h1>
       <menu class="menu">
         <div class="menu__list">
-          <li class="menu__item menu__item_active" data-direction="allDirections">Все направления</li>
+          <li class="menu__item menu__item_active" data-direction="allDirections">Все страны</li>
           <li class="menu__item" data-direction="italy">Италия</li>
           <li class="menu__item" data-direction="germany">Германия</li>
           <li class="menu__item" data-direction="greece">Греция</li>
@@ -30,14 +30,19 @@
   <section class="directions">
     <div class="container directions__container">
       <div class="swiper-container">
-        <div class="swiper-wrapper">
+        <div class="swiper-wrapper" id="dirWrap">
           <div class="swiper-slide direction" data-direction="italy">
             <div class="direction__more">
+              <div class="direction__closeMore">
+                <svg>
+                  <use xlink:href="svgSprite/sprite.svg#close"></use>
+                </svg>
+              </div>
               <p>Фрайбург-им-Брайсгау&nbsp;– оживленный университетский город в&nbsp;горах Шварцвальд на&nbsp;юго-западе
                 Германии,
                 известный своим умеренным климатом
                 и&nbsp;восстановленным после войны средневековым Старым городом.</p>
-              <div class="button">Подробнее</div>
+              <div class="button direction__button">Подробнее</div>
             </div>
             <img src="img/milan.png" alt="Milan" class="direction__img">
             <div class="direction__info">
@@ -285,7 +290,7 @@
           </div>
         </div>
         <!-- Add Pagination -->
-        <!-- <div class="swiper-pagination"></div> -->
+        <div class="swiper-pagination"></div>
       </div>
       <div class="swiper-buttons">
         <div class="swiper-button swiper-button_prev">
